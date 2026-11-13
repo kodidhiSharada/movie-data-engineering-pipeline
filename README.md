@@ -91,34 +91,42 @@ The API response is stored as raw JSON in the database for caching and future re
 ## ETL Pipeline Architecture
 
 ```text
-          MovieLens Dataset
-                 |
-                 v
-          Extract CSV Files
-                 |
-                 v
-          Data Transformation
-                 |
-                 v
-          Data Validation
-                 |
-                 v
-          SQLite Database
-                 |
-                 v
-            OMDb API
-                 |
-                 v
-          API Response Cache
-                 |
-                 v
-          Enriched Movie Tables
-                 |
-                 v
-          Analytical SQL Queries
-                 |
-                 v
-          Movie Analytics
+          
+                 MovieLens Dataset
+                        |
+                        v
+                 Extract CSV Files
+                        |
+                        v
+              Transform Movie Data
+             (Clean Titles, Years, Genres)
+                        |
+                        v
+                Validate Ratings
+                        |
+                        v
+                  Load into SQLite
+            (Movies, Genres, Ratings)
+                        |
+                        v
+                    OMDb API
+                        |
+                        v
+               Cache Raw API Responses
+                  (omdb_responses)
+                        |
+                        v
+             Transform OMDb Responses
+                        |
+                        v
+              Load Enriched Tables
+       (movie_details, directors, movie_directors)
+                        |
+                        v
+                Analytical SQL Queries
+                        |
+                        v
+                  Movie Analytics       
 ```
 
 ### 1. Extract
