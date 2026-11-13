@@ -320,7 +320,7 @@ Copy-Item .env.example .env
 Open `.env` and add your API key:
 
 ```text
-OMDB_API_KEY=your_actual_api_key
+OMDB_API_KEY=5e8c1b29
 OMDB_MAX_CALLS=950
 ```
 
