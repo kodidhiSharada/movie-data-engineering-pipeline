@@ -1,0 +1,14 @@
+# secrets
+.env
+
+# generated data
+data/
+*.db
+*.db-wal
+*.db-shm
+
+# python
+.venv/
+__pycache__/
+.pytest_cache/
+*.pyc
