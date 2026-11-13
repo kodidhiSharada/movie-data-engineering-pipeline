@@ -12,3 +12,6 @@ data/
 __pycache__/
 .pytest_cache/
 *.pyc
+
+# Personal documents
+*.docx
