@@ -287,8 +287,8 @@ Repeated ETL execution can introduce duplicate records if loading is not handled
 ### Step 1: Clone the repository
 
 ```bash
-git clone <your-github-repository-url>
-cd Movie-Data-Engineering
+git clone https://github.com/kodidhiSharada/movie-data-engineering-pipeline.git
+cd movie-data-engineering-pipeline
 ```
 
 ### Step 2: Create a virtual environment
